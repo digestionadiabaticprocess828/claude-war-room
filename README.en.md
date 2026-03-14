@@ -167,6 +167,7 @@ ativar modo war room: Real-time Notifications
 
 3. Wait for the sequential execution of all 5 agents
 4. The final report will be presented automatically by the last agent
+5. **5 Markdown documents** are automatically generated in the `war-room/[feature]/` folder of your project
 
 ---
 
@@ -179,6 +180,22 @@ ativar modo war room: Real-time Notifications
 3. **DEV-CONCURRENCY** — Race condition scenarios with temporal sequences (T1, T2), transaction and locking analysis
 4. **SRE-CHAOS** — Disaster catalog with failure sequence (T+0, T+30s, T+5min), timeout and circuit breaker analysis
 5. **LEAD-REPORT** — Consolidated Confidence Report
+
+### Auto-generated documents
+
+After execution, **5 Markdown files** are automatically created in the `war-room/[feature]/` folder of your project:
+
+```
+war-room/
+└── authentication-system/
+    ├── 01-doc-reverse-arquitetura.md
+    ├── 02-arquiteto-infra-escalabilidade.md
+    ├── 03-dev-concurrency-race-conditions.md
+    ├── 04-sre-chaos-cenarios-desastre.md
+    └── 05-lead-report-relatorio-executivo.md
+```
+
+Documents can be shared directly via GitHub, Confluence, Notion or any Markdown viewer — Mermaid diagrams render correctly.
 
 ### Final Report Format
 

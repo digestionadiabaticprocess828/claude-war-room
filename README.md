@@ -165,6 +165,7 @@ ativar modo war room: API de Relatórios
 
 3. Aguarde a execução sequencial dos 5 agentes
 4. O relatório final será apresentado automaticamente pelo último agente
+5. Os **5 documentos Markdown** serão gerados automaticamente na pasta `war-room/[feature]/` do seu projeto
 
 ---
 
@@ -177,6 +178,22 @@ ativar modo war room: API de Relatórios
 3. **DEV-CONCURRENCY** — Cenários de race condition com sequências temporais (T1, T2), análise de transações e locking
 4. **SRE-CHAOS** — Catálogo de desastres com sequência de falha (T+0, T+30s, T+5min), análise de timeouts e circuit breakers
 5. **LEAD-REPORT** — Report de Confiança consolidado
+
+### Documentos gerados automaticamente
+
+Ao final da execução, **5 arquivos Markdown** são criados automaticamente na pasta `war-room/[feature]/` do seu projeto:
+
+```
+war-room/
+└── sistema-de-notas/
+    ├── 01-doc-reverse-arquitetura.md
+    ├── 02-arquiteto-infra-escalabilidade.md
+    ├── 03-dev-concurrency-race-conditions.md
+    ├── 04-sre-chaos-cenarios-desastre.md
+    └── 05-lead-report-relatorio-executivo.md
+```
+
+Os documentos podem ser compartilhados diretamente via GitHub, Confluence, Notion ou qualquer viewer Markdown — os diagramas Mermaid renderizam corretamente.
 
 ### Formato do Report Final
 

@@ -28,3 +28,9 @@ Quando o usuário digitar **"ativar modo war room: [NOME DA FEATURE]"**, executa
 - Processar sequencialmente: cada agente recebe o contexto + descobertas dos anteriores
 - O [LEAD-REPORT] **obrigatoriamente** encerra com relatório executivo
 - **Formato do Report Final:** tabela com colunas: `Componente | Falha Detectada | Severidade (1-10) | Ação de Curto Prazo`
+- **Gerar documentos automaticamente ao final:** Após o último agente (LEAD-REPORT), criar pasta `war-room/[nome-da-feature]/` no diretório de trabalho e salvar 5 arquivos Markdown:
+  1. `01-doc-reverse-arquitetura.md` — Spec de arquitetura com diagramas Mermaid
+  2. `02-arquiteto-infra-escalabilidade.md` — Relatório de escalabilidade e gargalos
+  3. `03-dev-concurrency-race-conditions.md` — Análise de concorrência e race conditions
+  4. `04-sre-chaos-cenarios-desastre.md` — Cenários de desastre e resiliência
+  5. `05-lead-report-relatorio-executivo.md` — Relatório executivo consolidado
