@@ -1,0 +1,40 @@
+name: Sugestão de Melhoria
+description: Sugira uma melhoria para agentes, docs ou infraestrutura
+title: "[Melhoria] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da Melhoria
+      description: O que você gostaria que fosse melhorado?
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: Motivação
+      description: Por que isso seria útil? Qual problema resolve?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Agentes (prompts, estrutura, output)
+        - Orquestração (ordem, passagem de contexto)
+        - Instalação (install.sh)
+        - Documentação
+        - CI/CD
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta de Implementação
+      description: Se tiver uma ideia de como implementar, descreva aqui

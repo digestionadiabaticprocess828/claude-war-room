@@ -1,0 +1,64 @@
+name: Proposta de Novo Agente
+description: Sugira um novo agente para o pipeline War Room
+title: "[Agente] "
+labels: ["novo-agente", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por propor um novo agente! Preencha os campos abaixo para que possamos avaliar.
+
+  - type: input
+    id: nome
+    attributes:
+      label: Nome do Agente
+      description: Nome descritivo do agente
+      placeholder: "Ex: Security Auditor, Performance Profiler"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposito
+    attributes:
+      label: Propósito
+      description: O que este agente faz? Qual perspectiva única ele traz?
+      placeholder: "Descreva o foco de análise do agente e por que ele complementa os 5 existentes"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: posicao
+    attributes:
+      label: Posição no Pipeline
+      description: Onde ele deveria rodar na sequência?
+      options:
+        - Antes do DOC-REVERSE (1º)
+        - Entre DOC-REVERSE e ARQUITETO-INFRA (2º)
+        - Entre ARQUITETO-INFRA e DEV-CONCURRENCY (3º)
+        - Entre DEV-CONCURRENCY e SRE-CHAOS (4º)
+        - Entre SRE-CHAOS e LEAD-REPORT (5º)
+        - Depois do LEAD-REPORT (último)
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Estrutura de Output Esperada
+      description: Que tipo de relatório/análise ele produziria?
+      placeholder: "Descreva as seções, tabelas e diagramas que o agente deveria gerar"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dominio
+    attributes:
+      label: Domínio
+      description: Este agente é genérico ou específico de um domínio?
+      placeholder: "Ex: Genérico (qualquer sistema), FinTech, HealthTech, etc."
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto Adicional
+      description: Informações extras, referências ou exemplos
